@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yesBtn {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background: #444;
+      color: white;
+      position: absolute;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.4rem;
+      color: white;
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>I'm Really Sorry 🥺❤️</h1>
+  <p>Please forgive me... I promise I’ll make it up to you 💕</p>
+
+  <button id="yesBtn">Ok I forgive you 😘</button>
+  <button id="noBtn">I don't want your sorry 😤</button>
+
+  <div id="message">Yayyy!! 😍💖 You just made my day! I love you so much ❤️✨</div>
+</div>
+
+<script>
+  const noBtn = document.getElementById("noBtn");
+  const yesBtn = document.getElementById("yesBtn");
+  const message = document.getElementById("message");
+
+  // Move "No" button when hovered
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 150);
+    const y = Math.random() * (window.innerHeight - 100);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+  // Show love message when "Yes" is clicked
+  yesBtn.addEventListener("click", () => {
+    message.style.display = "block";
+    yesBtn.innerText = "I Love You ❤️";
+  });
+</script>
+
+</body>
+</html>
